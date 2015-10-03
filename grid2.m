@@ -6,25 +6,6 @@ function [a,bdry,xy] = grid2(k1,k2,ani,ani2)
 %
 % ani is degree of anisotropy
 % ani is 1 by default
-%
-% Copyright Daniel Spielman, 2013, Yale University.
-% This file of the LapSolve package.
-% See source file for license information
-
-% This file is part of LapSolve.
-%
-% LapSolve is free software: you can redistribute it and/or modify
-% it under the terms of the GNU General Public License as published by
-% the Free Software Foundation, either version 3 of the License, or
-% (at your option) any later version.
-%
-% LapSolve is distributed in the hope that it will be useful,
-% but WITHOUT ANY WARRANTY; without even the implied warranty of
-% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-% GNU General Public License for more details.
-%
-% You should have received a copy of the GNU General Public License
-% along with LapSolve.  If not, see <http://www.gnu.org/licenses/>.
 
 if (nargin < 4)
   ani2 = 1;
