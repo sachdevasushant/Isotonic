@@ -10,10 +10,12 @@ subject to x(i) <= x(j) if (i,j) is an edge in ‘a’.
 
 Here is an example with 200*200 grid graph.
 
+…
 >> a = grid2(200,200);
 >> a = triu(a);
 >> v = randn(length(a),1);
 >> [x, accuracy] = isotonicIPM(a,v);
+…
 
 The output contains a vector ‘x’ and an accuracy measure ‘accuracy’. x is a vector containing the values after l2-isotonic regression, while accuracy is equal to the duality gap of the computed value, which is a measure of closeness to the optimum value.
 
