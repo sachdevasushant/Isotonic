@@ -1,6 +1,6 @@
 function [x,accuracy] = isotonicIPM(a,v,solver)
 % [x,accuracy] = isotonicIPM(a,v) takes as input the adjacency matrix of a
-% DAG a, and a vector v or real numbers correspdonding on the vertices.
+% DAG a, and a vector v of real numbers corresponding to the vertices.
 
 default('solver',0);
 
