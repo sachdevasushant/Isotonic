@@ -16,7 +16,7 @@ Here is an example with 200*200 grid graph.
 >> [x, accuracy] = isotonicIPM(a,v);
 ```
 
-The output contains a vector ‘x’ and an accuracy measure ‘accuracy’. x is a vector containing the values after l2-isotonic regression, while accuracy is equal to the duality gap of the computed value, which is a measure of closeness to the optimum value.
+The output contains a vector ‘x’ and an accuracy measure ‘accuracy’. x is a vector containing the values after l2-isotonic regression, while accuracy gives an upper bound on the error in the objective value at x, compared to the optimum. The upper bound is computed by constructing a dual certificate.
 
 Note that the cmg solver has a few bugs. It occasionally fails to solve linear equations and runs into error. We suggest rerunning the program a few times and/or use a different solver. An alternate solver is provided with the code which is based on incomplete Cholesky factorization. You can use it by passing a third argument to isotonicIPM as follows:
 ```
