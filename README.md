@@ -1,4 +1,23 @@
 # Isotonic
+
+	Interior point method for computing Isotonic Regression
+    Part of the code for computing Isotonic regresstion
+    Original code downloaded from https://github.com/sachdevasushant/Isotonic
+	Copyright (C) 2015 Rasmus Kyng, Anup Rao, Sushant Sachdeva
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+	
 Interior point method for computing the Isotonic regression (under Euclidean norm) on arbitrary directed acyclic graphs. The code accompanies the paper 'Fast, Provable Algorithms for Isotonic Regression in all l_p-norms' at NIPS 2015
 
 This repository presently contains code for computing isotonic regression in directed acyclic graphs (DAG). The code is written in Matlab, and is meant to be called from Matlab. 
