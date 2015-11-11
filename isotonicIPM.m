@@ -31,7 +31,7 @@ B = e2m([ai,aj],-1,n);
 B = B';
 
 Theta = m;
-eps0 = 0.00001;
+eps0 = 0.1;
 beta2 = 10;
 
 
@@ -49,6 +49,19 @@ end
 
 
 eTa1 = -(x-v)'*B'*(-1./t)/norm(x-v);
+
+if (sign((-(x)'*B'*(-1./t)/norm(x-v))) == 1)
+    while eTa1<0
+       x = 2*x; 
+       eTa1 = (-(x-v)'*B'*(-1./t)/norm(x-v));
+    end
+else
+    while eTa1<0
+       x = x/2; 
+       eTa1 = (-(x-v)'*B'*(-1./t)/norm(x-v));
+    end
+end
+
 if(eTa1 <0)
     error('bad initialization!')
 end
@@ -72,7 +85,7 @@ while mu0 < eTa2
     end
     
     dGap = dualGap(B,x,v,mu0);
-    if (sum((x-v).^2) - dGap<10^-2)
+    if ((sum((x-v).^2) - dGap)/sum((x-v).^2)<eps0*10^-1)
         break;
     end
     
